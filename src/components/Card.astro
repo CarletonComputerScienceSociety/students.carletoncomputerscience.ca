@@ -1,0 +1,51 @@
+---
+const { colour, title, description } = Astro.props;
+---
+
+<style define:vars={{ colour }}>
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+div {
+  background-color: var(--colour);
+  border-radius: 0.3em;
+  width: 30em;
+  height: 15em;
+}
+
+h1, p, button {
+  position: relative;
+}
+
+h1 {
+  left: 1em;
+  top: 1em;
+  left: 1em;
+  font-weight: 300;
+}
+
+p {
+  top: 2em;
+  left: 2.2em;
+}
+
+button {
+  bottom: -5.5rem;
+  left: 2.5em;
+  width: 5.5em;
+  height: 2.5em;
+  font-size: medium;
+  border-radius: 5em;
+  border: 0em solid black;
+  background-color: black;
+  color: white;
+  font-weight: 200;
+}
+</style>
+
+<div>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <button>Read</button>
+</div>
