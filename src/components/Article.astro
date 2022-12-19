@@ -1,0 +1,80 @@
+---
+const {title , body} = Astro.props;
+---
+<style>
+* {
+  font-family: Helvetica, sans-serif;
+}
+.container{
+    position:relative;
+    border-radius: 0.1em;
+    width: 30em;
+    height: 17em;
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.07);
+}
+
+.title{
+    padding: 20px 20px 0px 20px;
+    font-weight: 500;
+    font-size:30px;
+}
+
+.body{
+    top: 2em;
+    left: 2.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+    overflow: hidden;   
+}
+.body-container{
+    padding: 20px 20px 20px 20px;
+}
+
+.button {
+    position: absolute ;
+    top:209px;
+    width: 140px;
+    height: 45px;
+    margin: 0px 30px 10px 300px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+
+.button:hover {
+  background-color: #c40729;
+  box-shadow: 0px 1px 30px #c40729;
+  color: #fff;
+  transform: translateY(-7px);
+}
+.icon{
+    width: 20px;
+    vertical-align:middle;
+}
+</style>
+
+<div class = "container">
+    <div class = "title">{title}</div>
+    <button class="button">     
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 512 512"><title>Book</title><path d="M256 160c16-63.16 76.43-95.41 208-96a15.94 15.94 0 0116 16v288a16 16 0 01-16 16c-128 0-177.45 25.81-208 64-30.37-38-80-64-208-64-9.88 0-16-8.05-16-17.93V80a15.94 15.94 0 0116-16c131.57.59 192 32.84 208 96zM256 160v288" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
+        Read
+    </button>
+    <div class = "body-container">
+    <div class = "body"> {body}</div>
+    </div>
+    
+</div>
+
+ 
